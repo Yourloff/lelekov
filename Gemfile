@@ -14,9 +14,11 @@ gem "redis", ">= 4.0.1"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'rails-i18n', '~> 7.0', '>= 7.0.9'
+gem "sassc-rails"
+gem "bootstrap"
 
 group :development, :test do
-  gem "debug", platforms: %i[ mri windows ]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -26,4 +28,5 @@ end
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'webdrivers'
 end
